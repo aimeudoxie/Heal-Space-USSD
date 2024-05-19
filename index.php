@@ -5,6 +5,11 @@ $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text        = $_POST["text"];
 
+// Initialize result if it's not set
+if (!isset($result)) {
+    $result = 0;
+}
+
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
     $response  = "CON Welcome to The Heal Space \n Choose a Test you want to take \n \n";
@@ -14,303 +19,92 @@ if ($text == "") {
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response ="CON Over the last 2 weeks, how often have you been \n
-    bothered by any of the following problems?\n\n
-    1. Little interest or pleasure in doing things\n
-    ";
+    $response = "CON Over the last 2 weeks, how often have you been \n";
+    $response .= "bothered by any of the following problems?\n\n";
+    $response .= "1. Little interest or pleasure in doing things\n";
     $response .= "0) Not at all \n";
     $response .= "1) Several days \n";
     $response .= "2) More than half the days\n";
     $response .= "3) Nearly every day\n";
- 
-} 
-else if ($text == "1*0") {
-   
-    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = 0;
-}
-else if ($text == "1*1") {
-   
-    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = 1;
-}
-else if ($text == "1*2") {
-   
-    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = 2;
-}
-else if ($text == "1*3") {
-   
-    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = 3;
-}
-//SECOND QUESTION ON DEPRESSION
-else if ($text == "1*0*0") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+0;
-}
-else if ($text == "1*0*1") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+1;
-}
-else if ($text == "1*0*2") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+2;
-}
-else if ($text == "1*0*3") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+3;
-}
 
-else if ($text == "1*1*0") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+0;
-}
-else if ($text == "1*1*1") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+1;
-}
-else if ($text == "1*1*2") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+2;
-}
-else if ($text == "1*1*3") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+3;
-}
+} else {
+    // Split text into array to determine the current question and results
+    $answers = explode("*", $text);
+    $numAnswers = count($answers);
 
-else if ($text == "1*0*0") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+0;
+    // Accumulate result based on previous answers
+    $result = array_sum(array_slice($answers, 1));
+
+    if ($numAnswers == 2) {
+        // Question 2
+        $response = "CON 2. Feeling down, depressed, or hopeless\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 3) {
+        // Question 3
+        $response = "CON 3. Trouble falling or staying asleep, or sleeping too much\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 4) {
+        // Question 4
+        $response = "CON 4. Feeling tired or having little energy\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 5) {
+        // Question 5
+        $response = "CON 5. Poor appetite or overeating\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 6) {
+        // Question 6
+        $response = "CON 6. Feeling bad about yourself — or that you are a failure or have let yourself or your family down\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 7) {
+        // Question 7
+        $response = "CON 7. Trouble concentrating on things, such as reading the newspaper or watching television\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 8) {
+        // Question 8
+        $response = "CON 8. Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 9) {
+        // Question 9
+        $response = "CON 9. Thoughts that you would be better off dead, or of hurting yourself\n\n";
+        $response .= "0) Not at all \n";
+        $response .= "1) Several days \n";
+        $response .= "2) More than half the days\n";
+        $response .= "3) Nearly every day\n";
+    } else if ($numAnswers == 10) {
+        // Question 10
+        $response = "CON 10. If you've had any of these problems, how difficult have they made it for you to do your work, take care of things at home, or get along with other people?\n\n";
+        $response .= "0) Not difficult at all \n";
+        $response .= "1) Somewhat difficult \n";
+        $response .= "2) Very difficult \n";
+        $response .= "3) Extremely difficult\n";
+    } else if ($numAnswers == 11) {
+        // All questions answered, show the result
+        $response = "END Your total score is $result\n";
+    }
 }
-else if ($text == "1*1*1") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+1;
-}
-else if ($text == "1*2*2") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+2;
-}
-else if ($text == "1*3*3") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+3;
-}
-else if ($text == "1*0*0") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+0;
-}
-else if ($text == "1*1*1") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+1;
-}
-else if ($text == "1*2*2") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+2;
-}
-else if ($text == "1*3*3") {
-   
-    $response ="CON 3. Trouble falling or staying asleep,
-    or sleeping too much\n\n
-    ";
-    $response .= "0) Not at all \n";
-    $response .= "1) Several days \n";
-    $response .= "2) More than half the days\n";
-    $response .= "3) Nearly every day\n";
-    $result = $result+3;
-}
-
-
-
-
-
-
-
-
-
-else if ($text == "2") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = " CON Imirire \n \n";
-    $response .= "1) Abwiriza yibanze \n";
-    $response .= "2) Amoboko yibiribwa \n";
-    $response .= "3) Amafunguro ateguye\n";
-} else if($text == "2*1") { 
-    // This is a second evel response where the user selected 1 in the first instance
-    $response = " CON Umwana niyuzuza amezi 6, tangira umuhe ubundi bwoko bw’ibiryo.\n";
-    $response .= "Amashereka akomeza kuba ingenzi mu bigize indyo y’umwana wawe\n";
-    $response .= "Ha umwana amashereka buri gihe mbere yo kumuha ibiryo \n";
-    $response.="Umwana ashobora gukenera igihe kinini kugira ngo amenyere
-    kurya ubundi bwoko bw’ibiryo bitari amashereka.\n";
-    $response.="Ihangane, shishikariza umwana wawe kurya ubyitayeho, ariko
-    ntukabimuhatire.\n";  
-     
-}
-
-else if($text == "2*2") { 
-    // This is a second level response where the user selected 1 in the first instance
-    $response = " CON Indyo yuzuye igirwa\n \n";
-    $response .= "1) Ibitera imbaraga\n";
-    $response .= "2) Ibyubaka umubiri \n";
-    $response .= "3) Ibirinda indwara\n";
-    
-    
-}
-else if($text == "2*2*1") { 
-    // This is a second level response where the user selected 1 in the first instance
-    $response = " CON Ibiribwa bitera imbaraga(ibinyamafufu)\n\n";
-    $response .= "-Ibirayi\n";
-    $response .= "-Igitoki\n";
-    $response .= "-Ibihaza\n";
-    $response .= "-Amakaroni y'abana\n";
-
-    
-    
-}
-else if($text == "2*2*2") { 
-    // This is a second level response where the user selected 1 in the first instance
-    $response = " CON Ibyubaka umubiri(Ibinyameke n'ibikomoka ku matungo)\n\n";
-    $response .= "- Igikoma(amasaka,ibigori)\n";
-    $response.="- Igikoma(uburo,ingano)\n";
-    $response .= " -Amagi\n";
-    $response .= " -Amafi\n";
-    $response .= " -Inyama\n";
-    $response .=  " -Ibishyimbo";
-    $response .= " -Indagara(ziseye)\n";
-    $response .= " -Ubunyobwa\n";
-    
-
-    
-    
-}
-
 
 // Echo the response back to the API
 header('Content-type: text/plain');
 echo $response;
-echo $result;
 ?>
