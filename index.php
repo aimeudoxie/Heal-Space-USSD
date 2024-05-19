@@ -7,15 +7,21 @@ $text        = $_POST["text"];
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Welcome to The Heal Space \n Choose a Test you want to take \n";
+    $response  = "CON Welcome to The Heal Space \n Choose a Test you want to take \n \n";
     $response .= "1) Depression Test \n";
     $response .= "2) Anxiety Test \n";
-    $response .= "3) PTSD(Post Traumatic Stress Disorder) 2\n";
+    $response .= "3) PTSD(Post Traumatic Stress Disorder)\n";
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response =" END Mu mezi atandatu ya mbere, onsa gusa\n Ntukagire ikindi uha umwana wawe mu mezi 6 ya mbere, kabone n’amazi. \n Amazi, ibindi binyobwa cyangwa ibindi biribwa bishobora gutera umwana
-    wawe uburwayi.";
+    $response =" CON Over the last 2 weeks, how often have you been \n
+    bothered by any of the following problems?\n\n";
+    $response =" 1. Little interest or pleasure in doing things
+    \n\n";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
    
 
 } else if ($text == "2") {
