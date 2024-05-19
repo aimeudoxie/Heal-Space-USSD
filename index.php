@@ -74,7 +74,7 @@ else if ($text == "1*0*0") {
     $response .= "1) Several days \n";
     $response .= "2) More than half the days\n";
     $response .= "3) Nearly every day\n";
-    $result = $result+0;
+    $result = $result+7;
 }
 
 
@@ -93,7 +93,7 @@ else if ($text == "2") {
     $response .= "2) Amoboko yibiribwa \n";
     $response .= "3) Amafunguro ateguye\n";
 } else if($text == "2*1") { 
-    // This is a second level response where the user selected 1 in the first instance
+    // This is a second evel response where the user selected 1 in the first instance
     $response = " CON Umwana niyuzuza amezi 6, tangira umuhe ubundi bwoko bw’ibiryo.\n";
     $response .= "Amashereka akomeza kuba ingenzi mu bigize indyo y’umwana wawe\n";
     $response .= "Ha umwana amashereka buri gihe mbere yo kumuha ibiryo \n";
@@ -145,4 +145,5 @@ else if($text == "2*2*2") {
 // Echo the response back to the API
 header('Content-type: text/plain');
 echo $response;
+echo $result;
 ?>
