@@ -64,6 +64,96 @@ else if ($text == "1*3") {
     $response .= "3) Nearly every day\n";
     $result = 3;
 }
+//SECOND QUESTION ON DEPRESSION
+else if ($text == "1*0*0") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+0;
+}
+else if ($text == "1*0*1") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+1;
+}
+else if ($text == "1*0*2") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+2;
+}
+else if ($text == "1*0*3") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+3;
+}
+
+else if ($text == "1*1*0") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+0;
+}
+else if ($text == "1*1*1") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+1;
+}
+else if ($text == "1*1*2") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+2;
+}
+else if ($text == "1*1*3") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+3;
+}
 
 else if ($text == "1*0*0") {
    
@@ -74,7 +164,84 @@ else if ($text == "1*0*0") {
     $response .= "1) Several days \n";
     $response .= "2) More than half the days\n";
     $response .= "3) Nearly every day\n";
-    $result = $result+7;
+    $result = $result+0;
+}
+else if ($text == "1*1*1") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+1;
+}
+else if ($text == "1*2*2") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+2;
+}
+else if ($text == "1*3*3") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+3;
+}
+else if ($text == "1*0*0") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+0;
+}
+else if ($text == "1*1*1") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+1;
+}
+else if ($text == "1*2*2") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+2;
+}
+else if ($text == "1*3*3") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+3;
 }
 
 
