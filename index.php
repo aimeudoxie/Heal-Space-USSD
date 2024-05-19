@@ -7,14 +7,10 @@ $text        = $_POST["text"];
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Turwanye imirire mibi yabana  Hitamo imyaka yumwana \n \n";
-    $response .= "1) Amezi 6 ya mbere \n";
-    $response .= "2) Amezi 6 kugeza ku mwaka \n";
-    $response .= "3) Umwaka kugeza ku myaka 2\n";
-    $response .= "4) imyaka 2 kugeza ku myaka 3 \n";
-    $response .= "5) imyaka 3 kugeza ku myaka 4 \n";
-    $response .= "6) imyaka 4 kugeza ku myaka 5 \n";
-
+    $response  = "CON Welcome to The Heal Space \n Choose a Test you want to take \n";
+    $response .= "1) Depression Test \n";
+    $response .= "2) Anxiety Test \n";
+    $response .= "3) PTSD(Post Traumatic Stress Disorder) 2\n";
 
 } else if ($text == "1") {
     // Business logic for first level response
