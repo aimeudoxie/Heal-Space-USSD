@@ -15,17 +15,39 @@ if ($text == "") {
 } else if ($text == "1") {
     // Business logic for first level response
     $response ="CON Over the last 2 weeks, how often have you been \n
-    bothered by any of the following problems?\n\n";
-
-    $response ="CON Little interest or pleasure in doing things
-    \n\n";
+    bothered by any of the following problems?\n\n\n
+    1. Little interest or pleasure in doing things\n\n
+    ";
     $response .= "0) Not at all \n";
     $response .= "1) Several days \n";
     $response .= "2) More than half the days\n";
     $response .= "3) Nearly every day\n";
-   
+ 
+} 
+else if ($text == "1*0") {
+    var a=0;
+    $response ="CON Over the last 2 weeks, how often have you been \n
+    bothered by any of the following problems?\n\n\n
+    2. Feeling down, depressed, or hopeless\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
 
-} else if ($text == "2") {
+}
+
+
+
+
+
+
+
+
+
+
+
+else if ($text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = " CON Imirire \n \n";
