@@ -14,9 +14,10 @@ if ($text == "") {
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response =" CON Over the last 2 weeks, how often have you been \n
+    $response ="CON Over the last 2 weeks, how often have you been \n
     bothered by any of the following problems?\n\n";
-    $response =" 1. Little interest or pleasure in doing things
+
+    $response ="CON Little interest or pleasure in doing things
     \n\n";
     $response .= "0) Not at all \n";
     $response .= "1) Several days \n";
