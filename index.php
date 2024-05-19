@@ -25,7 +25,7 @@ if ($text == "") {
  
 } 
 else if ($text == "1*0") {
-    var a=0;
+    
     $response ="CON Over the last 2 weeks, how often have you been \n
     bothered by any of the following problems?\n\n\n
     2. Feeling down, depressed, or hopeless\n\n
