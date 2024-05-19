@@ -15,8 +15,8 @@ if ($text == "") {
 } else if ($text == "1") {
     // Business logic for first level response
     $response ="CON Over the last 2 weeks, how often have you been \n
-    bothered by any of the following problems?\n\n\n
-    1. Little interest or pleasure in doing things\n\n
+    bothered by any of the following problems?\n\n
+    1. Little interest or pleasure in doing things\n
     ";
     $response .= "0) Not at all \n";
     $response .= "1) Several days \n";
@@ -26,19 +26,56 @@ if ($text == "") {
 } 
 else if ($text == "1*0") {
    
-    $response ="CON Over the last 2 weeks, how often have you been \n
-    bothered by any of the following problems?\n\n\n
-    2. Feeling down, depressed, or hopeless\n\n
+    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
     ";
     $response .= "0) Not at all \n";
     $response .= "1) Several days \n";
     $response .= "2) More than half the days\n";
     $response .= "3) Nearly every day\n";
     $result = 0;
-
+}
+else if ($text == "1*1") {
+   
+    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = 1;
+}
+else if ($text == "1*2") {
+   
+    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = 2;
+}
+else if ($text == "1*3") {
+   
+    $response ="CON 2. Feeling down, depressed, or hopeless\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = 3;
 }
 
-
+else if ($text == "1*0*0") {
+   
+    $response ="CON 3. Trouble falling or staying asleep,
+    or sleeping too much\n\n
+    ";
+    $response .= "0) Not at all \n";
+    $response .= "1) Several days \n";
+    $response .= "2) More than half the days\n";
+    $response .= "3) Nearly every day\n";
+    $result = $result+0;
+}
 
 
 
