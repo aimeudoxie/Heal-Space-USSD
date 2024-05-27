@@ -95,43 +95,43 @@ if ($text == "") {
         } else if ($numAnswers == 11) {
             // Calculate depression level
             if ($result < 5) {
-                $level = "Minimal depression";
-                $tips="Maintain a regular sleep schedule\n
-                Engage in physical activities daily\n
-               Eat a balanced diet rich in nutrients\n
-                Stay connected with loved ones\n
-                Practice mindfulness and relaxation techniques.";
+                $level = "Minimal depression\n";
+                $tips="1.Maintain a regular sleep schedule\n
+                2.Engage in physical activities daily\n
+                3.Eat a balanced diet rich in nutrients\n
+                4.Stay connected with loved ones\n
+                5.Practice mindfulness and relaxation techniques.";
             } else if ($result < 10) {
-                $level = "Mild depression";
-                $tips="Track your mood changes in a journal\n.
-                Incorporate stress-reducing activities into your routine\n.
-                Spend time in nature whenever possible\n.
-                Engage in hobbies that you enjoy\n.
-                Talk about your feelings with a trusted person\n.";
+                $level = "Mild depression\n";
+                $tips="1.Track your mood changes in a journal\n.
+                2.Incorporate stress-reducing activities into your routine\n.
+                3.Spend time in nature whenever possible\n.
+                4.Engage in hobbies that you enjoy\n.
+                5.Talk about your feelings with a trusted person\n.";
             } else if ($result < 15) {
-                $level = "Moderate depression";
-                $tips="Consider talking to a healthcare provider or therapist\n
-                        Practice regular meditation or yoga\n
-                        Set realistic goals for yourself each day\n
-                        Join a support group for people with similar experiences\n
-                        Focus on positive self-talk and affirmations\n";
+                $level = "Moderate depression\n";
+                $tips="1.Consider talking to a healthcare provider or therapist\n
+                        2.Practice regular meditation or yoga\n
+                        3.Set realistic goals for yourself each day\n
+                        4.Join a support group for people with similar experiences\n
+                        5.Focus on positive self-talk and affirmations\n";
             } else if ($result < 20) {
-                        $level = "Moderately severe depression";
-                        $tips ="Seek support from a mental health professional immediately.\n
-                        Reach out to friends or family for support.\n
-                        Engage in regular physical activity to improve mood.\n
-                        Avoid alcohol and recreational drugs.\n
-                        Establish a daily routine to add structure to your day.\n";
+                        $level = "Moderately severe depression\n";
+                        $tips ="1.Seek support from a mental health professional immediately.\n
+                        2.Reach out to friends or family for support.\n
+                        3.Engage in regular physical activity to improve mood.\n
+                        4.Avoid alcohol and recreational drugs.\n
+                        5.Establish a daily routine to add structure to your day.\n";
                     }
             else {
-                $level = "Severe depression";
-                $tips=" Immediate professional help is highly recommended.\n
-                Do not hesitate to call emergency services if needed.\n
-                Stay connected with a support network.\n
-                Practice deep breathing and relaxation techniques.\n
-                Avoid isolation; stay in touch with loved ones.\n" ;
+                $level = "Severe depression\n";
+                $tips="1.Immediate professional help is highly recommended.\n
+                2.Do not hesitate to call emergency services if needed.\n
+                3.Stay connected with a support network.\n
+                4.Practice deep breathing and relaxation techniques.\n
+                5.Avoid isolation; stay in touch with loved ones.\n" ;
             }
-            $response = "END Your total score is $result. You have $level.\n The following are self help tips\n $tips";
+            $response = "END Your total score is $result. You have $level. The following are self help tips\n \n $tips";
         }
     }
 } else if ($answers[0] == "2") {
@@ -193,39 +193,39 @@ if ($text == "") {
         } else if ($numAnswers == 9) {
             // Calculate anxiety level
             if ($result < 5) {
-                $level = "Minimal anxiety";
-                $tips="Maintain a balanced diet and regular exercise.\n
-                Practice mindfulness and meditation.\n
-                Stay socially connected with friends and family.\n
-                Engage in hobbies and activities you enjoy.\n
-                Ensure you get enough sleep each night.\n";
+                $level = "Minimal anxiety\n";
+                $tips="1.Maintain a balanced diet and regular exercise.\n
+                2.Practice mindfulness and meditation.\n
+                3.Stay socially connected with friends and family.\n
+                4.Engage in hobbies and activities you enjoy.\n
+                5.Ensure you get enough sleep each night.\n";
 
             } else if ($result < 10) {
-                $level = "Mild anxiety";
-                $tips="Incorporate stress-relieving activities like yoga or walking.\n
-                Talk to someone you trust about your feelings.\n
-                Limit caffeine and alcohol intake.\n
-                Practice deep breathing exercises.\n
-                Set aside time for relaxation and self-care.\n";
+                $level = "Mild anxiety\n";
+                $tips="1.Incorporate stress-relieving activities like yoga or walking.\n
+                2.Talk to someone you trust about your feelings.\n
+                3.Limit caffeine and alcohol intake.\n
+                4.Practice deep breathing exercises.\n
+                5.Set aside time for relaxation and self-care.\n";
 
             } else if ($result < 15) {
-                $level = "Moderate anxiety";
-                $tips="Consider speaking with a mental health professional.\n
-                Keep a journal to track your thoughts and feelings.\n
-                Develop a routine that includes relaxation techniques.\n
-                Join a support group for anxiety.\n
-                Focus on maintaining a healthy work-life balance.\n";
+                $level = "Moderate anxiety\n";
+                $tips="1.Consider speaking with a mental health professional.\n
+                2.Keep a journal to track your thoughts and feelings.\n
+                3.Develop a routine that includes relaxation techniques.\n
+                4.Join a support group for anxiety.\n
+                5.Focus on maintaining a healthy work-life balance.\n";
 
             } else {
-                $level = "Severe anxiety";
-                $tips="Seek support from a mental health professional immediately.\n
-                Join a chat room or support group for more help.\n
-                Practice regular physical activity to reduce stress.\n
-                Explore relaxation techniques like progressive muscle relaxation.\n
-                Avoid substances that can increase anxiety, such as caffeine.\n";
+                $level = "Severe anxiety\n";
+                $tips="1.Seek support from a mental health professional immediately.\n
+                2.Join a chat room or support group for more help.\n
+                3.Practice regular physical activity to reduce stress.\n
+                4.Explore relaxation techniques like progressive muscle relaxation.\n
+                5.Avoid substances that can increase anxiety, such as caffeine.\n";
 
             }
-            $response = "END Your total score is $result. You have $level.\n The following are self help tips";
+            $response = "END Your total score is $result. You have $level. The following are self help tips \n\n $tips";
         }
     }
 } else if ($answers[0] == "3") {
@@ -378,39 +378,39 @@ if ($text == "") {
         } else if ($numAnswers == 21) {
             // Calculate PTSD level
             if ($result < 20) {
-                $level = "No or minimal PTSD";
-                $tips = "Maintain a regular sleep schedule.\n
-                Engage in physical activities daily.\n
-                Eat a balanced diet rich in nutrients.\n
-                Stay connected with loved ones.\n
-                Practice mindfulness and relaxation techniques.";
+                $level = "No or minimal PTSD\n";
+                $tips = "1.Maintain a regular sleep schedule.\n
+                2.Engage in physical activities daily.\n
+                3.Eat a balanced diet rich in nutrients.\n
+                4.Stay connected with loved ones.\n
+                5.Practice mindfulness and relaxation techniques.";
 
             } else if ($result < 40) {
-                $level = "Mild PTSD";
-                $tips ="Track your mood changes in a journal.\n
-                Incorporate stress-reducing activities into your routine.\n
-                Spend time in nature whenever possible.\n
-                Engage in hobbies that you enjoy.\n
-                Talk about your feelings with a trusted person.";
+                $level = "Mild PTSD\n";
+                $tips ="1.Track your mood changes in a journal.\n
+                2.Incorporate stress-reducing activities into your routine.\n
+                3.Spend time in nature whenever possible.\n
+                4.Engage in hobbies that you enjoy.\n
+                5.Talk about your feelings with a trusted person.";
 
             } else if ($result < 60) {
-                $level = "Moderate PTSD";
-                $tips = " Consider talking to a healthcare provider or therapist.\n
-                Practice regular meditation or yoga.\n
-                Set realistic goals for yourself each day.\n
-                Join a support group for people with similar experiences.\n
-                Focus on positive self-talk and affirmations.";
+                $level = "Moderate PTSD\n";
+                $tips = "1.Consider talking to a healthcare provider or therapist.\n
+                2.Practice regular meditation or yoga.\n
+                3.Set realistic goals for yourself each day.\n
+                4.Join a support group for people with similar experiences.\n
+                5.Focus on positive self-talk and affirmations.";
 
             } else {
-                $level = "Severe PTSD";
-                $tips = "Immediate professional help is highly recommended.\n
-                Do not hesitate to call emergency services if needed.\n
-                Stay connected with a support network.\n
-                Practice deep breathing and relaxation techniques.\n
-                Avoid isolation; stay in touch with loved ones.";
+                $level = "Severe PTSD\n";
+                $tips = "1.Immediate professional help is highly recommended.\n
+                2.Do not hesitate to call emergency services if needed.\n
+                3.Stay connected with a support network.\n
+                4.Practice deep breathing and relaxation techniques.\n
+                5.Avoid isolation; stay in touch with loved ones.";
 
             }
-            $response = "END Your total score is $result. You have $level.\n The following are self help Tips\n $tips";
+            $response = "END Your total score is $result. You have $level. The following are self help Tips\n\n $tips";
         }
     }
 }
