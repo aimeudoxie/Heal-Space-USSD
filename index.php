@@ -100,28 +100,28 @@ if ($text == "") {
                 Engage in physical activities daily\n
                Eat a balanced diet rich in nutrients\n
                 Stay connected with loved ones\n
-                Practice mindfulness and relaxation techniques."
+                Practice mindfulness and relaxation techniques.";
             } else if ($result < 10) {
                 $level = "Mild depression";
                 $tips="Track your mood changes in a journal\n.
                 Incorporate stress-reducing activities into your routine\n.
                 Spend time in nature whenever possible\n.
                 Engage in hobbies that you enjoy\n.
-                Talk about your feelings with a trusted person\n."
+                Talk about your feelings with a trusted person\n.";
             } else if ($result < 15) {
                 $level = "Moderate depression";
                 $tips="Consider talking to a healthcare provider or therapist\n
                         Practice regular meditation or yoga\n
                         Set realistic goals for yourself each day\n
                         Join a support group for people with similar experiences\n
-                        Focus on positive self-talk and affirmations\n"
+                        Focus on positive self-talk and affirmations\n";
             } else if ($result < 20) {
                         $level = "Moderately severe depression";
                         $tips ="Seek support from a mental health professional immediately.\n
                         Reach out to friends or family for support.\n
                         Engage in regular physical activity to improve mood.\n
                         Avoid alcohol and recreational drugs.\n
-                        Establish a daily routine to add structure to your day.\n"
+                        Establish a daily routine to add structure to your day.\n";
                     }
             else {
                 $level = "Severe depression";
@@ -129,7 +129,7 @@ if ($text == "") {
                 Do not hesitate to call emergency services if needed.\n
                 Stay connected with a support network.\n
                 Practice deep breathing and relaxation techniques.\n
-                Avoid isolation; stay in touch with loved ones.\n" 
+                Avoid isolation; stay in touch with loved ones.\n" ;
             }
             $response = "END Your total score is $result. You have $level.\n The following are self help tips\n $tips";
         }
@@ -198,7 +198,7 @@ if ($text == "") {
                 Practice mindfulness and meditation.\n
                 Stay socially connected with friends and family.\n
                 Engage in hobbies and activities you enjoy.\n
-                Ensure you get enough sleep each night.\n"
+                Ensure you get enough sleep each night.\n";
 
             } else if ($result < 10) {
                 $level = "Mild anxiety";
@@ -206,7 +206,7 @@ if ($text == "") {
                 Talk to someone you trust about your feelings.\n
                 Limit caffeine and alcohol intake.\n
                 Practice deep breathing exercises.\n
-                Set aside time for relaxation and self-care.\n"
+                Set aside time for relaxation and self-care.\n";
 
             } else if ($result < 15) {
                 $level = "Moderate anxiety";
@@ -214,7 +214,7 @@ if ($text == "") {
                 Keep a journal to track your thoughts and feelings.\n
                 Develop a routine that includes relaxation techniques.\n
                 Join a support group for anxiety.\n
-                Focus on maintaining a healthy work-life balance.\n"
+                Focus on maintaining a healthy work-life balance.\n";
 
             } else {
                 $level = "Severe anxiety";
@@ -222,7 +222,7 @@ if ($text == "") {
                 Join a chat room or support group for more help.\n
                 Practice regular physical activity to reduce stress.\n
                 Explore relaxation techniques like progressive muscle relaxation.\n
-                Avoid substances that can increase anxiety, such as caffeine.\n"
+                Avoid substances that can increase anxiety, such as caffeine.\n";
 
             }
             $response = "END Your total score is $result. You have $level.\n The following are self help tips";
@@ -383,7 +383,7 @@ if ($text == "") {
                 Engage in physical activities daily.\n
                 Eat a balanced diet rich in nutrients.\n
                 Stay connected with loved ones.\n
-                Practice mindfulness and relaxation techniques."
+                Practice mindfulness and relaxation techniques.";
 
             } else if ($result < 40) {
                 $level = "Mild PTSD";
@@ -391,7 +391,7 @@ if ($text == "") {
                 Incorporate stress-reducing activities into your routine.\n
                 Spend time in nature whenever possible.\n
                 Engage in hobbies that you enjoy.\n
-                Talk about your feelings with a trusted person."
+                Talk about your feelings with a trusted person.";
 
             } else if ($result < 60) {
                 $level = "Moderate PTSD";
@@ -399,7 +399,7 @@ if ($text == "") {
                 Practice regular meditation or yoga.\n
                 Set realistic goals for yourself each day.\n
                 Join a support group for people with similar experiences.\n
-                Focus on positive self-talk and affirmations."
+                Focus on positive self-talk and affirmations.";
 
             } else {
                 $level = "Severe PTSD";
@@ -407,7 +407,7 @@ if ($text == "") {
                 Do not hesitate to call emergency services if needed.\n
                 Stay connected with a support network.\n
                 Practice deep breathing and relaxation techniques.\n
-                Avoid isolation; stay in touch with loved ones."
+                Avoid isolation; stay in touch with loved ones.";
 
             }
             $response = "END Your total score is $result. You have $level.\n The following are self help Tips\n $tips";
